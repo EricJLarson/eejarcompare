@@ -15,6 +15,9 @@ export MIGRATIONTOOL=/usr/local/bin/jakartaee-migration-1.0.9/bin/migrate.sh;
 [ -f ${MIGRATIONTOOL} ] || { echo ${MIGRATIONTOOL}' does not exist'; exit 2; } 
 export JARLIST=current.txt;
 [ -f ${JARLIST} ] || { echo ${JARLIST}' does not exist'; exit 2; } 
+JDKVERS=$(javap -version 2>&1 | awk -F '.' '{print $1}' )
+[ ${JDKVERS} -ge 11 ] || { echo "JDK 11 or later required"; exit 2; }
+
 
 export JAKARTADIR=/tmp/nihjakarta;
 export JAVAXDIR=/tmp/nihjavax;

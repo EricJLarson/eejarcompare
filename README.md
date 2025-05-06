@@ -1,7 +1,7 @@
 Migrated EE JAR Comparator
 ====================
 
-This sciprt determines whether a JAR is functionally changed by the Apache EE migration tool.
+This sciprt determines whether a JAR is functionally changed by the [Tomcate EE Migration Tool](https://tomcat.apache.org/download-migration.cgi).
 
 Specifically, on a list of local JARs, this runs the Apache Javax EE -> Jakarta EE migration tool, then compares 
 the bytecodes of the original classes with the converted classes. 
@@ -13,6 +13,12 @@ the bytecodes of the original classes with the converted classes.
 ### fd(find)
 
 Instead of _find_, this script uses [fd](https://github.com/sharkdp/fd) to parrallelize the tasks.
+
+### Tomlat Migration Tool for Jakarta EE Software Downloads
+
+This script assumes the [EE Migration Tool](https://tomcat.apache.org/download-migration.cgi) is on the host at 
+_/user/local/bin/jakartaee-migration-1.0.9/bin/migrate.sh_.
+
 
 ## Execute
 

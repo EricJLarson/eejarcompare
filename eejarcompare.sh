@@ -11,7 +11,7 @@ set -e
 # Migration tool location: ~/temp/jakartaee-migration-1.0.9/bin/migrate.sh 
 # List of JARs: ./current.txt
 
-export MIGRATIONTOOL=~/temp/jakartaee-migration-1.0.9/bin/migrate.sh;
+export MIGRATIONTOOL=/usr/local/bin/jakartaee-migration-1.0.9/bin/migrate.sh;
 [ -f ${MIGRATIONTOOL} ] || { echo ${MIGRATIONTOOL}' does not exist'; exit 2; } 
 export JARLIST=current.txt;
 [ -f ${JARLIST} ] || { echo ${JARLIST}' does not exist'; exit 2; } 

@@ -30,10 +30,10 @@ $ javap -version;
 ## Execute
 
 The script takes a single command-line argument:
-* A list of the paths of the JARs that are to be converted, one per line. Paths may be relative CWD.
+* A list of the paths of the JARs that are to be converted, one per line, each path relative to the CWD.
 
-In the current directory must be:
-* A directory containing the JARs 
+In the current directory (CWD) must be:
+* the directory containing the JARs
 
 The results are printed to STDOUT.  Diagnostic info is printed to STDERR. 
 
@@ -45,5 +45,5 @@ $ ~/bin/eejarcompare/eejarcompare.sh jarnames.txt  > /tmp/compare.stdout.log 2>/
 
 # Performance
 
-On a 6 core i7 with 16G of memory, this is CPU bound, taking ~700 seconds per JAR.
+On a 6 core i7 with 16G of memory, this is CPU bound, taking ~52 seconds per JAR.
 
